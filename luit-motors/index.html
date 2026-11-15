@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Luit Motors | Second-hand cars in Assam</title>
+<meta name="description" content="Checked second-hand cars across Assam. Browse low-budget and high-budget cars in Guwahati, Dibrugarh, Jorhat, Silchar and Tezpur.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--river:#0E3B43;--gamosa:#B1232B;--tea:#5E7A1E;--bg:#F5F7F6;--card:#fff;--ink:#14201F;--mute:#52605E;--line:#D9E0DE;--r:10px}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font:400 16px/1.55 "Public Sans",system-ui,sans-serif;color:var(--ink);background:var(--bg)}
+h1,h2,h3{font-family:"Bricolage Grotesque",system-ui,sans-serif;line-height:1.08;margin:0}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--gamosa);outline-offset:2px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+.gamosa{height:14px;background:repeating-linear-gradient(90deg,var(--gamosa) 0 6px,#fff 6px 8px,var(--gamosa) 8px 10px,#fff 10px 26px)}
+header.top{background:var(--river);color:#fff}
+header.top .wrap{display:flex;justify-content:space-between;align-items:center;padding:14px 20px}
+.brand{font:800 22px "Bricolage Grotesque",sans-serif;text-decoration:none}
+header.top a.call{background:#fff;color:var(--river);padding:8px 14px;border-radius:99px;font-weight:600;text-decoration:none;font-size:14px}
+.hero{background:var(--river);color:#fff;padding:40px 0 56px}
+.hero h1{font-size:clamp(34px,6vw,64px);font-weight:800;max-width:15ch}
+.hero p{max-width:52ch;color:#C9DBDA;margin:16px 0 28px;font-size:18px}
+.budget{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;max-width:760px}
+.budget button{font:inherit;text-align:left;padding:20px;border-radius:var(--r);border:2px solid #ffffff55;background:transparent;color:#fff;cursor:pointer;transition:background .15s,border-color .15s}
+.budget button b{display:block;font:800 26px "Bricolage Grotesque",sans-serif}
+.budget button span{font-size:14px;color:#C9DBDA}
+.budget button[aria-pressed=true]{background:#fff;color:var(--river);border-color:#fff}
+.budget button[aria-pressed=true] span{color:var(--mute)}
+.budget .all{grid-column:1/-1;padding:12px 20px}
+.budget .all b{font-size:18px;display:inline}
+.tools{display:flex;flex-wrap:wrap;gap:12px;margin:28px 0 8px;align-items:end}
+.tools label{display:flex;flex-direction:column;font-size:13px;font-weight:600;color:var(--mute);gap:4px}
+.tools input,.tools select{font:inherit;padding:10px 12px;border:1px solid var(--line);border-radius:8px;background:#fff;min-width:170px}
+.count{margin-left:auto;color:var(--mute);font-size:14px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:18px;padding:12px 0 56px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;display:flex;flex-direction:column}
+.card .pic{background:#E7EEEC;padding:14px 18px 6px;position:relative}
+.tag{position:absolute;top:10px;left:10px;font-size:12px;font-weight:600;padding:3px 9px;border-radius:99px;color:#fff}
+.tag.low{background:var(--tea)}.tag.high{background:var(--river)}
+.card .body{padding:14px 16px 16px;display:flex;flex-direction:column;gap:8px;flex:1}
+.card h3{font-size:20px}
+.price{font:800 24px "Bricolage Grotesque",sans-serif;color:var(--gamosa)}
+.specs{display:flex;flex-wrap:wrap;gap:6px;margin:0;padding:0;list-style:none}
+.specs li{font-size:13px;background:var(--bg);border:1px solid var(--line);padding:2px 8px;border-radius:6px}
+.loc{font-size:14px;color:var(--mute)}
+.card a.btn{margin-top:auto;text-align:center;background:var(--river);color:#fff;text-decoration:none;font-weight:600;padding:10px;border-radius:8px}
+.card a.btn:hover{background:#0a2c33}
+.empty{grid-column:1/-1;padding:40px 0;color:var(--mute)}
+.why{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:48px 0}
+.why .cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:28px;margin-top:22px}
+.why h2{font-size:32px}.why h3{font-size:19px;margin-bottom:6px}.why p{margin:0;color:var(--mute)}
+.contact{padding:48px 0 64px}
+.contact h2{font-size:32px;margin-bottom:6px}
+form{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;max-width:760px;margin-top:20px}
+form label{display:flex;flex-direction:column;font-size:13px;font-weight:600;gap:4px;color:var(--mute)}
+form input,form select{font:inherit;padding:11px 12px;border:1px solid var(--line);border-radius:8px}
+form button{font:inherit;font-weight:600;grid-column:1/-1;justify-self:start;background:var(--gamosa);color:#fff;border:0;padding:12px 22px;border-radius:8px;cursor:pointer}
+footer{background:var(--river);color:#C9DBDA;padding:22px 0;font-size:14px}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px}
+@media(max-width:520px){.budget{grid-template-columns:1fr}.count{margin-left:0;width:100%}}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#">Luit Motors</a>
+    <a class="call" id="callLink" href="#">Call us</a>
+  </div>
+</header>
+<div class="gamosa" aria-hidden="true"></div>
+
+<section class="hero">
+  <div class="wrap">
+    <h1>Used cars, priced for Assam's roads.</h1>
+    <p>Every car is checked for engine, body and papers before it is listed. Pick your budget to start.</p>
+    <div class="budget" role="group" aria-label="Choose a budget">
+      <button type="button" data-budget="low" aria-pressed="false"><b>Low budget</b><span>Up to ₹5 lakh. Hatchbacks and small sedans.</span></button>
+      <button type="button" data-budget="high" aria-pressed="false"><b>High budget</b><span>Above ₹5 lakh. SUVs, MUVs and premium sedans.</span></button>
+      <button type="button" class="all" data-budget="all" aria-pressed="true"><b>Show all cars</b></button>
+    </div>
+  </div>
+</section>
+
+<main class="wrap" id="stock">
+  <div class="tools">
+    <label>Search make or model<input id="q" type="search" placeholder="e.g. Swift, Fortuner"></label>
+    <label>City<select id="city"><option value="">All cities</option></select></label>
+    <label>Sort by<select id="sort">
+      <option value="asc">Price: low to high</option>
+      <option value="desc">Price: high to low</option>
+      <option value="new">Newest first</option>
+      <option value="km">Lowest km driven</option>
+    </select></label>
+    <span class="count" id="count" aria-live="polite"></span>
+  </div>
+  <div class="grid" id="grid"></div>
+</main>
+
+<section class="why">
+  <div class="wrap">
+    <h2>How we sell</h2>
+    <div class="cols">
+      <div><h3>Checked before listing</h3><p>Engine, suspension, flood damage and paperwork are inspected on every car.</p></div>
+      <div><h3>Clear papers</h3><p>RC transfer, insurance and NOC support for registrations from any Assam RTO.</p></div>
+      <div><h3>Finance and exchange</h3><p>Bring your old car for exchange. Loan help available for salaried and business buyers.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <h2>Ask about a car</h2>
+    <p>Send your details and we reply on WhatsApp.</p>
+    <form id="enquiry">
+      <label>Your name<input name="name" required autocomplete="name"></label>
+      <label>Phone number<input name="phone" type="tel" required autocomplete="tel"></label>
+      <label>Car you want<select name="car" id="carPick"></select></label>
+      <button type="submit">Send on WhatsApp</button>
+    </form>
+  </div>
+</section>
+
+<div class="gamosa" aria-hidden="true"></div>
+<footer>
+  <div class="wrap">
+    <span id="addr"></span>
+    <span>&copy; <span id="yr"></span> Luit Motors</span>
+  </div>
+</footer>
+
+<script>
+/* ===== EDIT THESE FOR YOUR REAL BUSINESS ===== */
+const CONFIG = {
+  whatsapp: "919000000000",            // country code + number, no + or spaces
+  phoneDisplay: "+91 90000 00000",
+  address: "G.S. Road, Guwahati, Assam 781005",
+  budgetLimit: 500000                  // cars at or below this are "Low budget"
+};
+
+/* ===== SAMPLE STOCK: replace with your real cars ===== */
+const CARS = [
+  {id:1, make:"Maruti Suzuki", model:"Alto 800 LXi", year:2014, km:62000, fuel:"Petrol", owner:"1st owner", price:185000, city:"Guwahati", color:"#C8CED1", type:"hatch"},
+  {id:2, make:"Maruti Suzuki", model:"Wagon R VXi", year:2013, km:71000, fuel:"Petrol", owner:"2nd owner", price:210000, city:"Nagaon", color:"#B1232B", type:"hatch"},
+  {id:3, make:"Hyundai", model:"Santro Asta", year:2015, km:54000, fuel:"Petrol", owner:"1st owner", price:245000, city:"Jorhat", color:"#E8E8E4", type:"hatch"},
+  {id:4, make:"Renault", model:"Kwid RXT", year:2017, km:38000, fuel:"Petrol", owner:"1st owner", price:295000, city:"Silchar", color:"#E07B1F", type:"hatch"},
+  {id:5, make:"Maruti Suzuki", model:"Swift Dzire VDi", year:2014, km:89000, fuel:"Diesel", owner:"2nd owner", price:360000, city:"Dibrugarh", color:"#F1F1EE", type:"sedan"},
+  {id:6, make:"Hyundai", model:"Grand i10 Sportz", year:2016, km:47000, fuel:"Petrol", owner:"1st owner", price:385000, city:"Tezpur", color:"#3C5A8A", type:"hatch"},
+  {id:7, make:"Maruti Suzuki", model:"Ertiga VDi", year:2013, km:96000, fuel:"Diesel", owner:"2nd owner", price:440000, city:"Guwahati", color:"#9AA3A6", type:"suv"},
+  {id:8, make:"Honda", model:"City VX", year:2019, km:33000, fuel:"Petrol", owner:"1st owner", price:795000, city:"Tezpur", color:"#2B2F33", type:"sedan"},
+  {id:9, make:"Mahindra", model:"XUV500 W8", year:2017, km:72000, fuel:"Diesel", owner:"1st owner", price:750000, city:"Dibrugarh", color:"#F1F1EE", type:"suv"},
+  {id:10, make:"Hyundai", model:"Creta SX", year:2018, km:51000, fuel:"Diesel", owner:"1st owner", price:890000, city:"Guwahati", color:"#6B7077", type:"suv"},
+  {id:11, make:"Mahindra", model:"Scorpio S11", year:2019, km:44000, fuel:"Diesel", owner:"1st owner", price:1080000, city:"Silchar", color:"#1D1F22", type:"suv"},
+  {id:12, make:"Toyota", model:"Innova Crysta 2.4 GX", year:2018, km:68000, fuel:"Diesel", owner:"1st owner", price:1450000, city:"Guwahati", color:"#E8E8E4", type:"suv"},
+  {id:13, make:"Toyota", model:"Fortuner 2.8 4x2", year:2016, km:82000, fuel:"Diesel", owner:"2nd owner", price:1725000, city:"Jorhat", color:"#2B2F33", type:"suv"}
+];
+
+const $ = s => document.querySelector(s);
+const inr = n => "₹" + new Intl.NumberFormat("en-IN").format(n);
+const isLow = c => c.price <= CONFIG.budgetLimit;
+const state = {budget:"all"};
+
+function carSVG(c){
+  const body = c.type==="suv"
+    ? "M8 62 L8 40 Q8 34 14 33 L40 30 L58 12 Q61 9 66 9 L118 9 Q124 9 128 14 L146 32 L176 36 Q184 38 184 46 L184 62 Z"
+    : c.type==="sedan"
+    ? "M8 62 L8 44 Q8 38 14 37 L50 33 L72 14 Q75 11 80 11 L116 11 Q121 11 124 14 L142 33 L174 38 Q184 40 184 48 L184 62 Z"
+    : "M8 62 L8 44 Q8 38 14 37 L44 33 L64 12 Q67 9 72 9 L112 9 Q118 9 121 13 L138 33 L172 38 Q184 40 184 48 L184 62 Z";
+  return `<svg viewBox="0 0 192 84" role="img" aria-label="${c.make} ${c.model}" width="100%">
+    <path d="${body}" fill="${c.color}" stroke="#14201F" stroke-opacity=".35" stroke-width="1.5"/>
+    <path d="M70 15 L112 15 L128 33 L60 33 Z" fill="#14201F" fill-opacity=".22"/>
+    <circle cx="48" cy="64" r="13" fill="#14201F"/><circle cx="48" cy="64" r="5" fill="#C8CED1"/>
+    <circle cx="146" cy="64" r="13" fill="#14201F"/><circle cx="146" cy="64" r="5" fill="#C8CED1"/>
+  </svg>`;
+}
+
+function waLink(text){return `https://wa.me/${CONFIG.whatsapp}?text=${encodeURIComponent(text)}`}
+
+function render(){
+  const q = $("#q").value.trim().toLowerCase(), city = $("#city").value, sort = $("#sort").value;
+  let list = CARS.filter(c =>
+    (state.budget==="all" || (state.budget==="low") === isLow(c)) &&
+    (!city || c.city===city) &&
+    (!q || (c.make+" "+c.model).toLowerCase().includes(q))
+  );
+  list.sort((a,b)=> sort==="asc"? a.price-b.price : sort==="desc"? b.price-a.price : sort==="new"? b.year-a.year : a.km-b.km);
+  $("#count").textContent = list.length + (list.length===1 ? " car" : " cars");
+  $("#grid").innerHTML = list.length ? list.map(c => `
+    <article class="card">
+      <div class="pic"><span class="tag ${isLow(c)?"low":"high"}">${isLow(c)?"Low budget":"High budget"}</span>${carSVG(c)}</div>
+      <div class="body">
+        <h3>${c.make} ${c.model}</h3>
+        <div class="price">${inr(c.price)}</div>
+        <ul class="specs"><li>${c.year}</li><li>${new Intl.NumberFormat("en-IN").format(c.km)} km</li><li>${c.fuel}</li><li>${c.owner}</li></ul>
+        <div class="loc">Available in ${c.city}</div>
+        <a class="btn" target="_blank" rel="noopener" href="${waLink(`Hi, I am interested in the ${c.year} ${c.make} ${c.model} listed at ${inr(c.price)}.`)}">Ask on WhatsApp</a>
+      </div>
+    </article>`).join("")
+    : `<p class="empty">No cars match these filters. Try another city or clear the search.</p>`;
+}
+
+document.querySelectorAll(".budget button").forEach(b => b.addEventListener("click", () => {
+  state.budget = b.dataset.budget;
+  document.querySelectorAll(".budget button").forEach(x => x.setAttribute("aria-pressed", x===b));
+  render();
+  $("#stock").scrollIntoView({behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth"});
+}));
+["#q","#city","#sort"].forEach(s => $(s).addEventListener("input", render));
+
+[...new Set(CARS.map(c=>c.city))].sort().forEach(c => $("#city").insertAdjacentHTML("beforeend", `<option>${c}</option>`));
+$("#carPick").innerHTML = `<option value="Not sure yet">Not sure yet</option>` + CARS.map(c=>`<option>${c.year} ${c.make} ${c.model}</option>`).join("");
+
+$("#enquiry").addEventListener("submit", e => {
+  e.preventDefault();
+  const f = new FormData(e.target);
+  window.open(waLink(`Hi, I am ${f.get("name")} (${f.get("phone")}). I am interested in: ${f.get("car")}.`), "_blank", "noopener");
+});
+
+$("#callLink").href = "tel:+" + CONFIG.whatsapp;
+$("#callLink").textContent = "Call " + CONFIG.phoneDisplay;
+$("#addr").textContent = CONFIG.address;
+$("#yr").textContent = new Date().getFullYear();
+render();
+</script>
+</body>
+</html>
